@@ -36,3 +36,27 @@ person_info = {
     'jian_ru': jian_ru,
 }
 print(person_info)
+# 整型 到 浮点型
+num_int = 10
+print('num_int', num_int)  # 10
+num_float = float(num_int)
+print('num_float', num_float)  # 10.0
+
+# 浮点型 到 整型
+gravity = 9.81
+print('gravity', int(gravity))  # 9
+
+# 整型 到 字符串
+num_int = 10
+print(num_int)  # 10
+num_str = str(num_int)
+print(num_str)  # 10
+
+# 字符串 到 整型或浮点型
+num_str = '10.6'
+print('num_int', int(float(num_str)))  # 10
+print('num_float', float(num_str))  # 10.6
+
+# 字符串 到 列表
+first_name_to_list = list(first_name)
+print(first_name_to_list)  # ['h','o','n','g']
