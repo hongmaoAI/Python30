@@ -21,9 +21,9 @@ print('result.imag', z.imag)
 print('result 单引号', 'hello world')
 print('result 双引号', "python NiuBi")
 """
-布尔值 True or Flase
+布尔值 True or False
 天是亮的吗？如果天是亮的，那么值是True
-天是亮的吗？如果天是不亮的，那么值是flase
+天是亮的吗？如果天是不亮的，那么值是false
 布尔值涉及到运算符时，值会被隐式转为数值
 """
 print('天是亮的吗？如果天不是亮的，那么值是', False)
