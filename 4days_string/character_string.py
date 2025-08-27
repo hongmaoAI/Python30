@@ -118,3 +118,16 @@ print(greeting[::-1])
 language = 'Python'
 pto = language[0:6:2]
 print(pto)
+# 字符串方法
+# capitalize():将字符串中的第一个字符转换为大写字母
+challenge = 'thirty days of python'
+print(challenge.capitalize())
+# count(): 返回字符串中子字符串的出现次数，count(子字符串，start=..，end=..)。start 是计数的起始索引，end 是计数的最后一个索引。
+challenge = 'thirty days of python'
+print(challenge.count('y'))
+print(challenge.count('y', 7, 14))
+print(challenge.count('th'))
+# endswith():判断字符串是否以特定的子字符串结尾，返回True或False
+challenge = 'thirty days of python'
+print(challenge.endswith('on')) #True
+print(challenge.endswith('tion')) #False
