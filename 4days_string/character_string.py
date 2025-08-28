@@ -129,5 +129,31 @@ print(challenge.count('y', 7, 14))
 print(challenge.count('th'))
 # endswith():判断字符串是否以特定的子字符串结尾，返回True或False
 challenge = 'thirty days of python'
-print(challenge.endswith('on')) #True
-print(challenge.endswith('tion')) #False
+print(challenge.endswith('on'))  # True
+print(challenge.endswith('tion'))  # False
+# expandtabs():用空格替换制表符，默认制表符大小为8.它接受制表符大小参数
+challenge = 'thirty\tdays\tof\tpython'
+print(challenge.expandtabs())
+print(challenge.expandtabs(10))
+# find():返回子字符串第一次出现的索引,如果未找到则返回-1
+challenge = 'thirty days of python'
+print(challenge.find('y'))
+print(challenge.find('th'))
+# rfind():返回子字符串最后一次出现的索引,如果为找到则返回-1
+challenge = 'thirty days of python'
+print(challenge.rfind('y'))
+print(challenge.rfind('th'))
+# format():将字符串格式化为更美观的输出 有关字符串格式化的更多信息
+first_name = 'Asabeneh'
+last_name = 'Yetayeh'
+age = 25
+job = 'junior_clerk'
+country = 'Finland'
+sentence = 'I am {} {}.I am a {}.I am {} years old.I live in {}.'.format(first_name, last_name, age, job, country)
+print(sentence)  # I am a Asabeneh.I am a 25.I am junior_clerk years old.I live in Finland.
+
+radius = 10
+pi = 3.14
+area = pi * radius ** 2
+result = 'The area of a circle with radius {} is {}'.format(str(radius), str(area))
+print(result)  # The area of a circle with radius 10 is 314.0
