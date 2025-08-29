@@ -151,9 +151,31 @@ job = 'junior_clerk'
 country = 'Finland'
 sentence = 'I am {} {}.I am a {}.I am {} years old.I live in {}.'.format(first_name, last_name, age, job, country)
 print(sentence)  # I am a Asabeneh.I am a 25.I am junior_clerk years old.I live in Finland.
-
 radius = 10
 pi = 3.14
 area = pi * radius ** 2
 result = 'The area of a circle with radius {} is {}'.format(str(radius), str(area))
 print(result)  # The area of a circle with radius 10 is 314.0
+# index(): 返回子字符串的最小索引，附加参数表示起始和结束索引(默认为0，字符串长度为-1).如果未找到字符串，则会引发valueError
+challenge = 'thirty days of python'
+sub_string = 'da'
+print(challenge.index(sub_string))
+# print(challenge.index(sub_string, 5))
+# rindex():返回子字符串的最大索引
+challenge = 'thirty days of python'
+sub_string = 'da'
+print(challenge.rindex(sub_string))  # 7
+# isalnum(): 判断字符串字符是否都是字母数字字符
+challenge = 'thirtyDaysPython'
+print(challenge.isalnum())  # True
+challenge = '30DaysPython'
+print(challenge.isalnum())  # True
+challenge = '30_days_python'
+print(challenge.isalnum())  # False
+# isalpha(): 判断字符串字符是否都是字母字符 (a-z and A-Z)
+challenge = 'thirty days of python'
+print(challenge.isalpha()) #False
+challenge = 'ThirtyDaysPython'
+print(challenge.isalpha()) #True
+num = '123'
+print(num.isalpha()) #False
