@@ -74,3 +74,41 @@ print(bg)
 print(sw)
 print(scandic)
 print(es)
+# 列表切分
+# 正索引：我们可以通过指定开始、结束和步长来指定一系列正索引，返回值将是一个新列表。 （开始默认值为 0，结束默认值为 len(lst) - 1（最后一项），步长默认值为 1）
+fruits = ['banana', 'orange', 'mango', 'lemon']
+all_fruits = fruits[0:4]
+print(all_fruits)  # ['banana', 'orange', 'mango', 'lemon']
+all_fruits = fruits[0:]
+print(all_fruits)  # ['banana', 'orange', 'mango', 'lemon']
+orange_and_mango = fruits[1:3]
+print(orange_and_mango)  # ['orange', 'mango']
+orange_and_lemon = fruits[1:]
+print(orange_and_lemon)  # ['orange', 'mango', 'lemon']
+orange_and_lemon = fruits[::2]
+print(orange_and_lemon)  # ['banana','mango']
+# 负索引：我们可以通过指定开始、结束和步长来指定一系列负索引，返回值将是一个新列表。
+fruits = ['banana', 'orange', 'mango', 'lemon']
+all_fruits = fruits[-4:]
+print(all_fruits)  # ['banana', 'orange', 'mango', 'lemon']
+orange_and_mongo = fruits[-3:-1]
+print(orange_and_mongo)  # ['orange','mango']
+orange_mango_lemon = fruits[-3:]
+print(orange_mango_lemon)  # ['orange','mango','lemon']
+reverse_fruits = fruits[::-1]  # 负步长将按相反顺序排列列表
+print(reverse_fruits)  # ['lemon','mango','orange','banana']
+# 修改列表，列表是一个可变或可修改的有序集合。
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits[0] = 'avocado'
+print(fruits)  # ['avocado','orange', 'mango', 'lemon']
+fruits[1] = 'apple'
+print(fruits)  # ['avocado','apple', 'mango', 'lemon']
+last_index = len(fruits) - 1
+fruits[last_index] = 'lime'
+print(fruits)  # ['avocado','apple', 'mango', 'lime']
+# 解锁列表项，使用in运算符检查列表项是否为列表的成员
+fruits = ['banana', 'orange', 'mango', 'lemon']
+does_exist = 'banana' in fruits
+print(does_exist)  # True
+does_exist = 'lime' in fruits
+print(does_exist)  # False
