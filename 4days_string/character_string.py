@@ -174,8 +174,79 @@ challenge = '30_days_python'
 print(challenge.isalnum())  # False
 # isalpha(): 判断字符串字符是否都是字母字符 (a-z and A-Z)
 challenge = 'thirty days of python'
-print(challenge.isalpha()) #False
+print(challenge.isalpha())  # False
 challenge = 'ThirtyDaysPython'
-print(challenge.isalpha()) #True
+print(challenge.isalpha())  # True
 num = '123'
-print(num.isalpha()) #False
+print(num.isalpha())  # False
+# isdecimal(): 判断符串中的所有字符是否都是十进制 (0-9)
+challenge = 'thirty days of python'
+print(challenge.isdecimal())  # False
+challenge = '123'
+print(challenge.isdecimal())  # True
+challenge = '\u000B2'
+print(challenge.isdecimal())  # False
+challenge = '12 3'
+print(challenge.isdecimal())  # False
+# isdigit():判断字符串中的所有字符是否都是数字(0-9和一些其他表示数字的Unicode字符)
+challenge = 'Thirty'
+print(challenge.isdigit())  # False
+challenge = '8.9'
+print(challenge.isdigit())  # False
+challenge = '30'
+print(challenge.isdigit())  # True
+challenge = '\u00B2'
+print(challenge.isdigit())  # True
+# isnumeric(): 判断字符串中的所有字符是否都是数字或与数字相关（就像 isdigit()，只是接受更多符号，如 ½）
+num = '10'
+print(num.isnumeric())  # True
+num = '\u00BD'
+print(num.isnumeric())  # True
+num = '10.5'
+print(num.isnumeric())  # False
+# isidentifier(): 判断有效的标识符 - 检查字符串是否是有效的变量名
+challenge = '30DaysOfPython'
+print(challenge.isidentifier())  # False
+challenge = 'thirty_days_of_python'
+print(challenge.isidentifier())  # True
+# islower(): 判断字符串中的所有字母是否都是小写
+challenge = 'thirty days of python'
+print(challenge.islower())  # True
+challenge = 'Thirty days of python'
+print(challenge.islower())  # False
+# isupper(): 判断字符串中的所有字母是否都是大写
+challenge = 'thirty days of python'
+print(challenge.isupper())  # False
+challenge = 'THIRTY DAYS OF PYTHON'
+print(challenge.isupper())  # True
+# join(): 返回连接后的字符串
+web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
+result = ''.join(web_tech)
+print(result)  # HTMLCSSJavaScriptReact
+web_tech = ['HTML', 'CSS', 'JavaScript', 'React']
+result = '# '.join(web_tech)
+print(result)
+# strip(): 删除从字符串开头到结尾的所有给定字符
+challenge = 'thirty days if pythoonnn'
+print(challenge.strip('th'))  # irty days if pythoonnn
+# replace(): 用给定的字符串替换子字符串
+challenge = 'thirty days of python'
+print(challenge.replace('python', 'coding'))  # thirty days of coding
+# split():使用给定的字符串或空格作为分隔符来拆分字符串
+challenge = 'thirty days of python'
+print(challenge.split())  # ['thirty','days','of','python']
+challenge = 'thirty,days,of,python'
+print(challenge.split(','))  # ['thirty','days','of','python']
+# title(): 返回标题大小写的字符串
+challenge = 'thirty days of python'
+print(challenge.title())  # Thirty Days Of Python
+# swapcase(): 将所有大写字符转换为小写字符，将所有小写字符转换为大写字符
+challenge = 'thirty days of python'
+print(challenge.swapcase())  # THIRTY DAYS OF PYTHON
+challenge = 'Thirty Days Of Python'
+print(challenge.swapcase())  # tHIRTY dAYS oF pYTHON
+# * startswith(): 判断字符串是否以指定字符串开头
+challenge = 'thirty days of python'
+print(challenge.startswith('thirty'))  # True
+challenge = '30 days if python'
+print(challenge.startswith('thirty')) #False
