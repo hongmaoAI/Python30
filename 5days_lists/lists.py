@@ -112,3 +112,30 @@ does_exist = 'banana' in fruits
 print(does_exist)  # True
 does_exist = 'lime' in fruits
 print(does_exist)  # False
+# 添加列表项，要将项添加到现有列表的末尾，我们使用append()方法
+lst = list()
+lst.append('item')
+print(lst)  # ['item']
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.append('apple')
+print(fruits)  # ['banana','orange','mango','lemon','apple']
+fruits.append('lime')
+print(fruits)  # ['banana','orange','mango','lemon','apple','lime']
+# 插入列表项,我们可以使用 *insert()* 方法在列表中的指定索引处插入单个项。请注意，其他项将向右移动。*insert()* 方法接受两个参数：索引和要插入的项。
+lst = ['item1', 'item2']
+lst.insert(-1, 'haha')
+print(lst)
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.insert(2, 'apple')  # 将apple插入索引为2 其他项向右移动
+print(fruits)  # ['banana', 'orange', 'apple', 'mango', 'lemon']
+fruits.insert(3, 'lime')
+print(fruits)  # ['banana', 'orange', 'apple', 'lime', 'mango', 'lemon']
+# 移除列表项 使用 *remove()* 方法从列表中删除指定的项
+lst = ['item1', 'item2']
+lst.remove('item2')
+print(lst)
+fruits = ['banana', 'orange', 'mango', 'lemon', 'banana']
+fruits.remove('banana')
+print(fruits)  # ['orange', 'mango', 'lemon', 'banana']
+fruits.remove('lemon')
+print(fruits)  # ['orange', 'mango', 'banana']
