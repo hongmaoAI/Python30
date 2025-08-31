@@ -106,7 +106,7 @@ print(fruits)  # ['avocado','apple', 'mango', 'lemon']
 last_index = len(fruits) - 1
 fruits[last_index] = 'lime'
 print(fruits)  # ['avocado','apple', 'mango', 'lime']
-# 解锁列表项，使用in运算符检查列表项是否为列表的成员
+# 检索列表项，使用in运算符检查列表项是否为列表的成员
 fruits = ['banana', 'orange', 'mango', 'lemon']
 does_exist = 'banana' in fruits
 print(does_exist)  # True
