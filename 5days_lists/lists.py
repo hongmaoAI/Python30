@@ -139,5 +139,117 @@ fruits.remove('banana')
 print(fruits)  # ['orange', 'mango', 'lemon', 'banana']
 fruits.remove('lemon')
 print(fruits)  # ['orange', 'mango', 'banana']
-使用 Pop 删除列表项
-使用 *pop()* 方法删除指定索引（如果未指定索引，则删除最后一项）：
+# 使用 Pop 删除列表项 使用 *pop()* 方法删除指定索引（如果未指定索引，则删除最后一项）：
+lst = ['item1', 'item2']
+lst.pop()  # 删除列表的最后一项
+print(lst)  # 结果为 ['item1']
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.pop()
+print(fruits)  # ['banana', 'orange', 'mango']
+fruits.pop(0)
+print(fruits)  # ['orange','mango']
+# 使用 Del 删除列表项,使用 *del* 关键字删除指定索引，也可以用于删除索引范围内的项。它还可以完全删除列表
+lsts = ['item1', 'item2']
+del lst[0]  # 删除列表某一项
+# print(lst)  # ['item2']
+del lst  # 删除整个列表 (删除的列表不能输出)
+fruits = ['banana', 'orange', 'mango', 'lemon', 'kiwi', 'lime']
+del fruits[0]
+print(fruits)  # ['orange', 'mango', 'lemon', 'kiwi', 'lime']
+del fruits[1]
+print(fruits)  # ['orange', 'lemon', 'kiwi', 'lime']
+del fruits[1:3]
+print(fruits)  # 删除索引为1到3的项 结果为['orange', 'lime']
+del fruits  # 删除整个列表
+# 清空列表项，使用 *clear()* 方法清空列表：
+lst = ['item1', 'item2']
+lst.clear()
+print(lst)  # []
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.clear()
+print(fruits)  # []
+# 列表复制,可以通过将其重新分配给新变量来复制列表: list2 = list1。现在，list2 是 list1 的引用，我们对 list2 进行的任何更改也将修改原始的 list1。但是有很多时候我们不想修改原始的列表，而是想要一个不同的副本。为了避免这个问题，我们使用 *copy()*。
+lst = ['item1', 'item2']
+lst_copy = lst.copy()
+print(lst_copy)  # ['item1','item2']
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits_copy = fruits.copy()
+fruits_copy[0] = 'apple'
+print(fruits)  # ['banana', 'orange', 'mango', 'lemon']
+print(fruits_copy)  # ['apple', 'orange', 'mango', 'lemon']
+# 连接列表,有几种方法可以连接或连接两个或多个列表。
+'''
+(1)加号(+)
+# 语法
+list3 = list1 + list2
+'''
+positive_numbers = [1, 2, 3, 4, 5]
+zero = [0]
+negative_numbers = [-5, -4, -3, -2, -1]
+integers = positive_numbers + zero + negative_numbers
+print(integers)  # [1,2,3,4,5,0,-5,-4,-3,-2,-1]
+fruits = ['banana', 'orange', 'mango', 'lemon']
+vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
+fruits_and_vegetables = fruits + vegetables
+print(fruits_and_vegetables)  # ['banana', 'orange', 'mango', 'lemon', 'Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
+# 使用 *extend()方法 extend()* 方法可以将列表附加到列表中。请参阅下面的示例。
+list1 = ['item1', 'item2']
+list2 = ['item3', 'item4', 'item5']
+list1.extend(list2)
+print(list1)  # ['item1', 'item2', 'item3', 'item4', 'item5']
+num1 = [0, 1, 2, 3]
+num2 = [4, 5, 6, 7]
+num1.extend(num2)
+print('Numbers', num1)  # [0,1,2,3,4,5,6,7]
+negative_numbers = [-5, -4, -3, -2, -1]
+positive_numbers = [1, 2, 3, 4, 5]
+zero = [0]
+
+negative_numbers.extend(zero)
+negative_numbers.extend(positive_numbers)
+print('Integers:', negative_numbers)  # Integers: [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
+fruits = ['banana', 'orange', 'mango', 'lemon']
+vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
+fruits.extend(vegetables)
+print('Fruits and vegetables:',
+      fruits)  # Fruits and vegetables: ['banana', 'orange', 'mango', 'lemon', 'Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot']
+# 统计列表项,使用 *count()* 方法返回列表中指定项出现的次数:
+lst = ['item1', 'item2']
+print(lst.count('item1'))  # 1
+fruits = ['banana', 'orange', 'mango', 'lemon']
+print(fruits.count('orange'))  # 1
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+print(ages.count(24))  # 3
+# 查找项的索引,*index()* 方法返回列表中项的索引:
+lst = ['item1', 'item2']
+print(lst.index('item1'))  # 0
+fruits = ['banana', 'orange', 'mango', 'lemon']
+print(fruits.index('banana'))  # 0
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+print(ages.index(24))  # 2
+# 列表反转,使用 *reverse()* 方法反转列表的顺序。
+lst = ['item1', 'item2']
+lst.reverse()
+print(lst)  # ['item2', 'item1']
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.reverse()
+print(fruits)  # ['lemon', 'mango', 'orange', 'banana']
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+ages.reverse()
+print(ages)  # [24, 25, 24, 26, 25, 24, 19, 22]
+# 列表排序,要对列表进行排序，我们可以使用 *sort()* 方法或内置函数 *sorted()*。*sort()* 方法将列表项按升序重新排序并修改原始列表。如果 *sort()* 方法的 reverse 参数为 true，则会按降序排列列表。
+# sort():这个方法会修改原始列表
+lst = ['item3', 'item2', 'item5']
+lst.sort()  # ['item2', 'item3','item5']
+lst.sort(reverse=True)  # ['item5', 'item3', 'item2']
+print(lst)
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+ages.sort()  # [19, 22, 24, 24, 24, 25, 25, 26]
+ages.sort(reverse=True)  # [26, 25, 25, 24, 24, 24, 22, 19]
+print(ages)
+# sorted(): 不会修改原始列表，而是返回一个新列表**示例:
+fruits = ['banana', 'orange', 'mango', 'lemon']
+print(sorted(fruits))  # ['banana', 'lemon', 'mango', 'orange']
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits = sorted(fruits, reverse=True)
+print(fruits)  # ['orange', 'mango', 'lemon', 'banana']
