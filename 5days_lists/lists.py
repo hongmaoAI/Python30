@@ -139,3 +139,5 @@ fruits.remove('banana')
 print(fruits)  # ['orange', 'mango', 'lemon', 'banana']
 fruits.remove('lemon')
 print(fruits)  # ['orange', 'mango', 'banana']
+使用 Pop 删除列表项
+使用 *pop()* 方法删除指定索引（如果未指定索引，则删除最后一项）：
