@@ -37,4 +37,13 @@ print(cfa[0][:1], cfa[1][:1], cfa[2][:1])  # C F A
 challenge = 'Coding For All'
 coding = 'Coding'
 print(challenge.index(coding))  # 0
-print(challenge.find(coding)) # 0
+print(challenge.find(coding))  # 0
+# 将字符串 'Coding For All' 中的单词 coding 替换为 Python。
+challenge = 'Coding For All'
+print(challenge.replace('Coding', 'Python'))  # Python For All
+# 使用 replace 方法或其他方法将 Python for Everyone 替换为 Python for All。
+challenge = 'Python for Everyone'
+print(challenge.replace('Everyone', 'All'))  # Python for All
+# 使用空格作为分隔符拆分字符串 'Coding For All'。
+challenge = 'Coding For All'
+print(challenge.split())  # ['Coding', 'For', 'All']
