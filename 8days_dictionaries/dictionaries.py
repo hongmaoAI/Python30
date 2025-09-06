@@ -162,7 +162,7 @@ print(dct_copy)  # {'key1': 'value1', 'key2': 'value2', 'key3': 'value3', 'key4'
 dct = {'key1': 'value1', 'key2': 'value2', 'key3': 'value3', 'key4': 'value4'}
 keys = dct.keys()
 print(keys)  # dict_keys(['key1', 'key2', 'key3', 'key4'])
-# 获取字典的值列表 values 方法给我们一个包含所有字典值的列表。
+#获取字典的值列表 values 方法给我们一个包含所有字典值的列表。
 dct = {'key1': 'value1', 'key2': 'value2', 'key3': 'value3', 'key4': 'value4'}
 values = dct.values()
 print(values) #dict_values(['value1', 'value2', 'value3', 'value4'])
