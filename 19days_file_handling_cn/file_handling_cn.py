@@ -175,6 +175,7 @@ with open('./bi.csv', 'w', encoding='UTF8', newline='') as f:
 
 # 带有xlsx扩展名的文件
 # 要读取Excel文件，我们需要安装xlrd包。我们将使用它来读取Excel文件。
-# excel_book = xlrd.open_workbook('sample.xls')
-# print(excel_book.nsheets)
-# print(excel_book.sheet_names)
+excel_book = xlrd.open_workbook('./sample.xls')
+
+print(excel_book.nsheets)
+print(excel_book.sheet_names)
