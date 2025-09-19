@@ -118,3 +118,105 @@ numpy_array_from_list = np.array([1, 2, 3, 4, 5])
 print('原始数组：', numpy_array_from_list)  # 原始数组： [1 2 3 4 5]
 print('模数：', numpy_array_from_list % 2)  # 模数： [1 0 1 0 1]
 print('模数：', np.mod(numpy_array_from_list, 2))  # 模数： [1 0 1 0 1]
+
+# 整除
+numpy_array_from_list = np.array([1, 2, 3, 4, 5])
+print('原始数组：', numpy_array_from_list)  # [1 2 3 4 5]
+print('整除：', numpy_array_from_list // 2)  # 整除： [0 1 1 2 2]
+print('整除：', np.floor_divide(numpy_array_from_list, 2))  # 整除： [0 1 1 2 2]
+
+# 指数
+numpy_array_from_list = np.array([1, 2, 3, 4, 5])
+print('原始数组：', numpy_array_from_list)  # 原始数组： [1 2 3 4 5]
+print('指数：', numpy_array_from_list ** 2)  # 指数： [ 1  4  9 16 25]
+print('指数：', np.power(numpy_array_from_list, 2))  # 指数： [ 1  4  9 16 25]
+
+# 检查数据类型
+numpy_int_arr = np.array([1, 2, 3, 4])
+numpy_float_arr = np.array([1.1, 2.0, 3.2])
+numpy_bool_arr = np.array([-3, -2, -1, 0, 1, 2, 3], dtype='bool')
+print(numpy_int_arr.dtype)  # int64
+print(numpy_float_arr.dtype)  # float64
+print(numpy_bool_arr.dtype)  # bool
+
+# 转换类型
+"""
+我们可以使用astype将数据类型从一种类型转换为另一种类型。
+让我们将int类型转换为浮点数，浮点数转换为整数，整数转换为布尔型
+"""
+numpy_int_arr = np.array([1, 2, 3, 4], dtype='float')
+print(numpy_int_arr.astype('int').dtype)  # int64
+numpy_float_arr = np.array([1.1, 2.0, 3.2])
+print(numpy_float_arr.astype('int').dtype)  # int64
+numpy_int_arr = np.array([-3, -2, -1, 0, 1, 2, 3])
+print(numpy_int_arr.astype('bool').dtype)  # bool
+
+# 多维数组
+# NumPy的主要优点之一是处理多维数组。我们先构建多维数组
+two_dimensional_array = np.array([(1, 2, 3), (4, 5, 6), (7, 8, 9)])
+print(type(two_dimensional_array))  # <class 'numpy.ndarray'>
+print(two_dimensional_array)  # [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print('形状：', two_dimensional_array.shape)  # 形状： (3, 3)
+print('大小：', two_dimensional_array.size)  # 大小： 9
+print('数据类型：', two_dimensional_array.dtype)  # 数据类型： int64
+
+# 从NumPy中获取项目
+two_dimensional_array = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+first_row = two_dimensional_array[0]
+second_row = two_dimensional_array[1]
+third_row = two_dimensional_array[2]
+print('第一行', first_row)  # 第一行 [1 2 3]
+print('第二行', second_row)  # 第二行 [4 5 6]
+print('第三行', third_row)  # 第三行 [7 8 9]
+
+# 现在让我们获取每一行的第一项：
+first_column = two_dimensional_array[:, 0]
+second_column = two_dimensional_array[:, 1]
+third_column = two_dimensional_array[:, 2]
+print('第一列：', first_column)  # 第一列： [1 4 7]
+print('第二列：', second_column)  # 第二列： [2 5 8]
+print('第三列：', third_column)  # 第三列： [3 6 9]
+
+# NumPy数组切片
+"""
+切片NumPy数组与切片Python列表相似，只是它适用于两个维度（行和列）。
+让我们先看看如何从NumPy数组中切片项目
+"""
+numpy_array_from_list = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+print('原始数组：', numpy_array_from_list)  # 原始数组： [ 1  2  3  4  5  6  7  8  9 10]
+# [参数1：参数二：参数三] 参数一：起始位置  参数二：停止位置  参数三：步长
+ten_first_items = numpy_array_from_list[0:10]
+print('前10项：', ten_first_items)
+first_five_items = numpy_array_from_list[:10:2]
+print(first_five_items)  # [1 3 5 7 9]
+last_five_items = numpy_array_from_list[5:]
+print('后5项：', last_five_items)  # 后5项： [ 6  7  8  9 10]
+
+# 反转数组
+reversed_array = numpy_array_from_list[::-1]
+print('反转数组', reversed_array)  # 反转数组 [10  9  8  7  6  5  4  3  2  1]
+
+# 我们可以在Numpy二维数组上使用切片：
+two_dimension_array = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(two_dimension_array)
+print(two_dimension_array[1, 1])  # 5
+print(two_dimension_array[1, 1:3])  # [5 6]
+print(two_dimension_array[1:3, 1:3])  # [[5 6] [8 9]]
+
+# NumPy连接数组
+first_array = np.array([1, 2, 3])
+second_array = np.array([4, 5, 6])
+third_array = np.array([7, 8, 9])
+# 水平连接
+horizontal_concat = np.hstack((first_array, second_array, third_array))
+print('水平连接：', horizontal_concat)  # 水平连接： [1 2 3 4 5 6 7 8 9]
+# 垂直连接
+vertical_concat = np.vstack((first_array, second_array, third_array))
+print('垂直连接：', vertical_concat)  # 垂直连接： [[1 2 3] [4 5 6] [7 8 9]]
+
+# 常见NumPy函数
+# 我们看看最常见的NumPy函数: 最小值、最大值、平均值
+numpy_array_from_list = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+print('最小值：', numpy_array_from_list.min())  # 最小值： 1
+print('最大值：', numpy_array_from_list.max())  # 最大值： 10
+print('平均值：', numpy_array_from_list.mean())  # 平均值： 5.5
