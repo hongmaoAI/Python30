@@ -5,16 +5,19 @@
     <title>{{title}}</title>
 </head>
 <body>
-<ul>
-    <li><a href="/">主页</a></li>
-    <li><a href="/about">关于</a></li>
-    <li><a href="/post">文章</a></li>
-</ul>
-<h1>欢迎回到{{name}}</h1>
-<ul>
-    {% for tech in techs %}
-    <li>{{tech}}</li>
-    {% endfor %}
-</ul>
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+    <h1>欢迎回到{{name}}</h1>
+    <p>
+        这个项目是通过使用以下技术构建的：
+        <span class="tech">Flask</span>,<span class="tech">Python</span> and <span class="tech">HTML</span>
+    </p>
+    <ul>
+        {% for tech in techs %}
+        <li class="tech">{{tech}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
 </body>
 </html>

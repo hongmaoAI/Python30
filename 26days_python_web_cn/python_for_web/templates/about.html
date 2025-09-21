@@ -5,11 +5,13 @@
     <title>{{title}}</title>
 </head>
 <body>
-<ul>
-    <li><a href="/">主页</a></li>
-    <li><a href="/about">关于</a></li>
-    <li><a href="/post">文章</a></li>
-</ul>
-<h1>关于{{name}}</h1>
+{% extends 'layout.html' %} {% block content %}
+<div class="container">
+    <h1>关于{{name}}</h1>
+    <p>
+        这个挑战是一个30天编程挑战，旨在帮助你学习Python编程语言，通过每天解决一个Python问题。
+    </p>
+</div>
+{% endblock %}
 </body>
 </html>
