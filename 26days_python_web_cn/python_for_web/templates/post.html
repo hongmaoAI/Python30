@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<ul>
+    <li><a href="/">主页</a></li>
+    <li><a href="/about">关于</a></li>
+    <li><a href="/post">文章</a></li>
+</ul>
+<h1>{{name}}</h1>
+<p>当前路径：{{path}}</p>
+<form method="post" action="/result">
+    <div>
+        <input type="text" name="first_name" placeholder="第一名字" required/>
+    </div>
+    <div>
+        <input type="text" name="last_name" placeholder="姓氏" required/>
+    </div>
+    <div>
+        <input type="text" name="old_job" placeholder="旧工作" required/>
+    </div>
+    <div>
+        <input type="text" name="current_job" placeholder="当前工作"/>
+    </div>
+    <div>
+        <input type="text" name="country" placeholder="国家"/>
+    </div>
+    <div>
+        <button type="submit">提交</button>
+    </div>
+</form>
+</body>
+</html>
