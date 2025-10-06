@@ -4,6 +4,8 @@
 # 输出：
 # 输入你的年龄：15
 # 你还需要等待3年才能学习驾驶
+from numpy.ma.core import true_divide
+
 user_import = input('输入你的年龄：')
 user_import = int(user_import)
 if user_import >= 18:
@@ -33,3 +35,49 @@ a = int(a)
 b = int(b)
 if a > b:
 	print('%a大于%s' % (a, b))
+else:
+	print('%a小于%s' % (a, b))
+# 2级
+# 编写代码，根据学生的分数给出等级：
+'''
+80-100, A
+70-79, B
+60-69, C
+50-59, D
+0-49, F
+'''
+grade = input('输入你的分数：')
+grade = int(grade)
+if 80 <= grade <= 100:
+	print('80-100,A')
+elif 70 <= grade <= 79:
+	print('70-79,B')
+elif 60 <= grade <= 69:
+	print('60-69,C')
+elif 50 <= grade <= 59:
+	print('50-59,D')
+else:
+	print('0-49,F')
+# 检查是否是秋天、冬天、春天或夏天。如果用户输入：9 月、10 月或 11 月，是秋天。12 月、1 月或 2 月，是冬天。3 月、4 月或 5 月，是春天。6 月、7 月或 8 月，是夏天。
+month = input('输入月份：')
+month = int(month)
+if 9 <= month <= 10:
+	print('9 月、10 月或 11 月，是秋天。')
+elif 3 <= month <= 5:
+	print('3 月、4 月或 5 月，是春天。')
+elif 6 <= month <= 8:
+	print('6 月、7 月或 8 月，是夏天。')
+else:
+	print('12 月、1 月或 2 月，是冬天。')
+'''
+以下列表包含了一些水果：
+fruits = ['banana', 'orange', 'mango', 'lemon']
+如果列表中不存在某个水果，则将其添加到列表中并打印修改后的列表。如果水果存在，则打印('该水果已在列表中')。
+'''
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits_food = input('输入水果数量：')
+if fruits_food not in fruits:
+	fruits.append(fruits_food)
+	print(fruits)
+else:
+	print('该水果已在列表中')
