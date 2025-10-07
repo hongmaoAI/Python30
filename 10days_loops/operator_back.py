@@ -94,3 +94,23 @@ for sums in range(0, 101):
 for sums in range(0, 101):
 	if sums % 2 != 0:
 		print(sums)
+
+# 二级
+# 使用for循环从0到100遍历并且输出所有数字的和。
+sums = 0
+for i in range(0, 101):
+	sums = i + sums
+print('The sum of all numbers is %s' % sums)
+
+# * 使用for循环从0到100遍历并且分别输出所有奇数和所有偶数的和。
+odd_sums = 0
+even_sums = 0
+for i in range(0, 101):
+	if i % 2 == 0:
+		odd_sums = i + odd_sums
+
+	else:
+		even_sums = i + even_sums
+
+print(f'The sum of all odd numbers is {odd_sums}.')
+print(f'The sum of all even numbers is {even_sums}.')
