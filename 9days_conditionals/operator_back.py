@@ -81,3 +81,46 @@ if fruits_food not in fruits:
 	print(fruits)
 else:
 	print('该水果已在列表中')
+# 这里有一个人员字典。请随意修改它！
+person = {
+	'first_name': 'Hong',
+	'last_name': 'Mao',
+	'age': 250,
+	'country': '芬兰',
+	'is_married': False,
+	'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+	'address': {
+		'street': '太空街',
+		'zipcode': '02210'
+	}
+}
+# 检查是否在字典中有 skills 键，如果有则打印 skills 列表中的中间技能。
+print('skills' in person)  # True
+# 检查是否在字典中有 skills 键，如果有则检查该人是否具备'Python'技能并打印结果。
+print(person['skills'])  # ['JavaScript', 'React', 'Node', 'MongoDB', 'Python']
+'''
+如果一个人的技能只有 JavaScript 和 React，打印('他是前端开发者')，
+如果一个人的技能有 Node、Python、MongoDB，打印('他是后端开发者')，
+如果一个人的技能有 React、Node 和 MongoDB，打印('他是全栈开发者')，
+否则打印'未知头衔' - 为获得更准确的结果，可以嵌套更多条件！
+'''
+skill = person.get('skills')
+if isinstance(skill, list):
+	if 'javaScript' in skill and 'React' in skill and len(skill) == 2:
+		print('他是前端开发者')
+	elif 'Node' in skill and 'Python' in skill and 'MongoDB' in skill:
+		print('他是后端开发者')
+	elif 'React' in skill and 'Node' in skill and 'MongoDB' in skill:
+		print('他是全栈开发者')
+	else:
+		print('未知头衔')
+else:
+	print('还没有技能')
+# 如果该人结婚了且居住在芬兰，按以下格式打印信息：Hong Mao住在芬兰。他未婚。
+married = person.get('is_married')
+first_name = person.get('first_name')
+last_name = person.get('last_name')
+if not married:
+	print(f'{first_name} {last_name}住在芬兰，他未婚')
+else:
+	print('哦，他结婚了')
