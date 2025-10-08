@@ -65,3 +65,71 @@ def reverse_list(args):
 
 print(reverse_list([1, 2, 3, 4, 5, 6, 7, 8]))
 print(reverse_list(["A", "B", 'C']))
+
+
+# 声明一个名为 capitalize_list_items 的函数。它接受一个列表作为参数，并返回一个大写的列表项。
+def capitalize_list_items(args):
+    for arg in args:
+        print(arg.upper())
+    return None
+
+
+capitalize_list_items(['apple', 'orange', 'banana'])
+
+
+# 声明一个名为 add_item 的函数。它接受一个列表和一个项作为参数。它返回在末尾添加项的列表。
+def add_item(item, args):
+    new_list = args.copy()
+    new_list.append(item)
+    return new_list
+
+
+print(add_item('apple', ['banana', 'orange']))
+
+
+# 声明一个名为 remove_item 的函数。它接受一个列表和一个项作为参数。它返回移除该项后的列表。
+def remove_item(item, args):
+    new_args = args.copy()
+    new_args.remove(item)
+    return new_args
+
+
+print(remove_item('apple', ['banana', 'orange', 'apple']))
+
+
+# 声明一个名为 sum_of_numbers 的函数。它接受一个数字参数并将范围内的所有数字相加。
+def sum_of_numbers(number):
+    sums = range(0, number + 1)
+    sums_one = 0
+    for sum_one in sums:
+        sums_one = sum_one + sums_one
+    return sums_one
+
+
+print(sum_of_numbers(3))
+
+
+# 声明一个名为 sum_of_odds 的函数。它接受一个数字参数并将范围内的所有奇数相加。
+def sum_of_odds(number):
+    number_list = range(0, number + 1)
+    add_env = 0
+    for sums in number_list:
+        if sums % 2 != 0:
+            add_env = sums + add_env
+    return add_env
+
+
+print(sum_of_odds(3))
+
+
+# 声明一个名为 sum_of_even 的函数。它接受一个数字参数并将范围内的所有偶数相加。
+def sum_of_even(number):
+    number_list = range(0, number + 1)
+    add_odd = 0
+    for sums in number_list:
+        if sums % 2 == 0:
+            add_odd = sums + add_odd
+    return add_odd
+
+
+print(sum_of_even(4))
