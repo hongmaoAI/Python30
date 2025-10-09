@@ -133,3 +133,29 @@ def sum_of_even(number):
 
 
 print(sum_of_even(4))
+
+
+# 2级
+# 声明一个名为 evens_and_odds 的函数。它接受一个正整数作为参数并计算该数内偶数和奇数的数量。
+def evens_def(positive_integer):
+    list_num = range(0, positive_integer + 1)
+    i = 0
+    for sums in list_num:
+        if sums % 2 == 0:
+            i += 1
+    return i
+
+
+print('偶数有：', evens_def(6))
+
+
+def odds_def(positive_integer):
+    list_num = range(0, positive_integer + 1)
+    i = 0
+    for sums in list_num:
+        if sums % 2 != 0:
+            i += 1
+    return i
+
+
+print('奇数有：', odds_def(9))
