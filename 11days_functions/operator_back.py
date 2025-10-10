@@ -159,3 +159,57 @@ def odds_def(positive_integer):
 
 
 print('奇数有：', odds_def(9))
+
+
+# 调用你的函数 factorial，它接受一个整数作为参数并返回该数的阶乘。
+def factorial(integer):
+    random = range(1, integer + 1)
+    result = 1
+    if integer < 0:
+        return None
+    elif integer == 1:
+        return 1
+    else:
+        for random_one in random:
+            result *= random_one
+        return result
+
+
+print(factorial(5))
+
+
+# 调用你的函数 is_empty，它接受一个参数并检查它是否为空。
+def is_empty(value):
+    return not bool(value)
+
+
+def check_value(data, check_fun):
+    return check_fun(data)
+
+
+data = [1, 2, 3, 4, 5, 8, 7, 6,10]
+print(check_value(data, is_empty))
+
+
+# 编写不同的函数，它们接受列表。它们应该计算平均值、计算中位数、计算众数、计算范围、计算方差、计算标准差。
+def mean(one_lists):
+    sum = 0
+    for lists in one_lists:
+        sum += lists
+    return sum / len(one_lists)
+
+
+print(mean(data))
+
+
+def median(one_lists):
+    lists_copy = data.copy()
+    lists_copy.sort()
+    list_long = len(lists_copy)
+    if len(one_lists) % 2 == 0:
+        return (lists_copy[list_long // 2 - 1] + lists_copy[list_long // 2]) / 2
+    else:
+        return lists_copy[int(len(one_lists) / 2)]
+
+
+print('d', median(data))
